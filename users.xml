@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<employees>
+    <employee>
+        <externalId>101</externalId>
+        <username>sleeflang</username>
+        <firstName>Sebastiaan</firstName>
+        <lastName>Leeflang</lastName>
+        <email>sleeflang@avit.com</email>
+    </employee>
+    <employee>
+        <externalId>102</externalId>
+        <username>kvegte</username>
+        <firstName>Kasper</firstName>
+        <lastName>Van der Vegte</lastName>
+        <email>kvegte@avit.com</email>
+    </employee>
+    <employee>
+        <externalId>103</externalId>
+        <username>rkluitenberg</username>
+        <firstName>Rene</firstName>
+        <lastName>Kluitenberg</lastName>
+        <email>rkluitenberg@avit.com</email>
+    </employee>
+    <employee>
+        <externalId>104</externalId>
+        <username>dvuurst</username>
+        <firstName>Dirk</firstName>
+        <lastName>van de Vuurst</lastName>
+        <email>dvuurst@avit.com</email>
+    </employee>
+</employees>
