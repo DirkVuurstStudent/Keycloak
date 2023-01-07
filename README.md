@@ -1,17 +1,22 @@
-Starting the containers
------------------------
+Installation
+------------
 
-**Create keycloak network**
+**Create docker network**
 ``docker network create keycloak-network``
 
-**Start containers, krijg het op deze manier niet aan de praat**
-``docker-compose run keycloak -d``
+**Start keycloak**
+``docker-compose up -d keycloak``
 
-**Run shell script to start containers**
-``sh start.sh``
+**Go to container**
+``https://localhost:8080``
 
-**Visit container, may take some time for it to start up**
-``http://localhost:8080/``
 
-**Run shell script to stop container**
-``sh stop.sh``
+Build a .jar from a project
+---------------------------
+
+- Download the project in the `projects` directory
+- Update the `<name-of-project>` in the `projects/docker-compose.yml` file
+- `cd projects`
+- `docker-compose run build`
+- Copy the `...jar` file to the `providers` directory
+- Restart keycloak with `docker-compose restart keycloak`

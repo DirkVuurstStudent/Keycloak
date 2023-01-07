@@ -1,0 +1,7 @@
+version: "3.1"
+services:
+    build:
+        image: maven:3.6.0-jdk-11-slim
+        command: 'mvn -f /home/app/pom.xml clean install'
+        volumes:
+            - "./XML-provider:/home/app"
