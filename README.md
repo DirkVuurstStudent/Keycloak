@@ -17,6 +17,6 @@ Build a .jar from a project
 - Download the project in the `projects` directory
 - Update the `<name-of-project>` in the `projects/docker-compose.yml` file
 - `cd projects`
-- `docker-compose run build`
+- `docker-compose run buildWebhookProvider` or `docker-compose run buildXMLProvider`
 - Copy the `...jar` file to the `providers` directory
 - Restart keycloak with `docker-compose restart keycloak`
