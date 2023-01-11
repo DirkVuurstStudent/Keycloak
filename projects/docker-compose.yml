@@ -1,7 +1,12 @@
 version: "3.1"
 services:
-    build:
+    buildXMLProvider:
         image: maven:3.6.0-jdk-11-slim
         command: 'mvn -f /home/app/pom.xml clean install'
         volumes:
             - "./XML-provider:/home/app"
+    buildWebhookProvider:
+        image: maven:3.6.0-jdk-11-slim
+        command: 'mvn -f /home/app/pom.xml clean install'
+        volumes:
+            - "./webhook-provider:/home/app"

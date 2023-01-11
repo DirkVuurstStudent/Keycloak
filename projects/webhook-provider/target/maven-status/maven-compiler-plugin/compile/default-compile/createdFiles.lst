@@ -1,0 +1,5 @@
+keycloak/WebhookConfig.class
+keycloak/federation/WebhookFederationProvider.class
+keycloak/federation/WebhookFederationProviderFactory.class
+keycloak/HttpWebhookProvider.class
+keycloak/HttpWebhookProviderFactory.class
