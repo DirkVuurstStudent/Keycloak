@@ -1,1 +1,78 @@
 /* Hier kunnen we eigen look en feel geven van Avit Group */
+html {
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: #0070c0;
+}
+
+#kc-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+    width: 100%;
+}
+
+#kc-visual {
+    background: linear-gradient(-48deg, #5ea4d5, #0070c0, #1b2032, #0070c0,  #0070c0);
+    background-size: 400% 400%;
+    animation: gradient 25s ease infinite;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
+}
+
+#kc-container-wrapper {
+    width: 50%;
+    padding-bottom: 32px;
+    margin-top: 160px;
+}
+
+#kc-header {
+    font-size: 24px;
+    text-align: center;
+    width: 90%;
+    margin: 7% auto 25px;
+    font-weight: 300;
+    color: rgb(68, 68, 68);
+    max-width: 420px;
+}
+
+#kc-content {
+    margin: 0 auto;
+    max-width: 420px;
+}
+
+#kc-form-login label {
+    position: absolute;
+    margin: 24px;
+}
+
+#kc-login {
+    margin-top: 15px;
+}
+
+#username, #password {
+    margin: 12px;
+    padding: 12px;
+    position: relative;
+    background-color: transparent;
+}
+
+#username:focus, #password:focus {
+    background-color: #eee;
+}
