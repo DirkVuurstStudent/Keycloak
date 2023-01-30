@@ -1,5 +1,5 @@
-keycloak/WebhookConfig.class
-keycloak/federation/WebhookFederationProvider.class
-keycloak/federation/WebhookFederationProviderFactory.class
-keycloak/HttpWebhookProvider.class
-keycloak/HttpWebhookProviderFactory.class
+avit/keycloak/WebhookConfig.class
+avit/keycloak/HttpWebhookProviderFactory.class
+avit/keycloak/federation/WebhookFederationProvider.class
+avit/keycloak/federation/WebhookFederationProviderFactory.class
+avit/keycloak/HttpWebhookProvider.class

@@ -1,32 +1,24 @@
-package keycloak;
+package avit.keycloak;
 
-import java.io.IOException;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-
+import okhttp3.*;
 import org.jboss.logging.Logger;
 import org.keycloak.events.Event;
 import org.keycloak.events.EventListenerProvider;
 import org.keycloak.events.admin.AdminEvent;
 
-import okhttp3.Credentials;
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
+import java.io.IOException;
 
 public class HttpWebhookProvider implements EventListenerProvider {
 
     private static final Logger log = Logger.getLogger(HttpWebhookProvider.class);
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     private final OkHttpClient httpClient = new OkHttpClient();
-    private String serverUrl;
-    private String username;
-    private String password;
+    private final String serverUrl;
+    private final String username;
+    private final String password;
 
     public HttpWebhookProvider(String serverUrl, String username, String password) {
         this.serverUrl = serverUrl;
@@ -72,8 +64,6 @@ public class HttpWebhookProvider implements EventListenerProvider {
         try {
             jsonString = mapper.writeValueAsString(event);
             sendJson(jsonString);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -91,8 +81,6 @@ public class HttpWebhookProvider implements EventListenerProvider {
             jsonString = mapper.writeValueAsString(node);
 
             sendJson(jsonString);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

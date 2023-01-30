@@ -1,6 +1,6 @@
-package keycloak.federation;
+package avit.keycloak.federation;
 
-import keycloak.WebhookConfig;
+import avit.keycloak.WebhookConfig;
 import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.component.ComponentModel;

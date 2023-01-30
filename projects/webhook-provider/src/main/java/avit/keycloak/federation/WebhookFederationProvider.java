@@ -1,4 +1,4 @@
-package keycloak.federation;
+package avit.keycloak.federation;
 
 import org.jboss.logging.Logger;
 import org.keycloak.component.ComponentModel;

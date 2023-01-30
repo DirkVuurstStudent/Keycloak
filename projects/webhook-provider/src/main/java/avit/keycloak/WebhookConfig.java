@@ -1,6 +1,6 @@
-package keycloak;
+package avit.keycloak;
 
-import keycloak.federation.WebhookFederationProvider;
+import avit.keycloak.federation.WebhookFederationProvider;
 import lombok.Getter;
 import org.jboss.logging.Logger;
 import org.keycloak.common.util.MultivaluedHashMap;
@@ -27,6 +27,7 @@ public class WebhookConfig {
                 .property().name("webhook-list")
                 .label("Webhook list")
                 .defaultValue("")
+                .options()
                 .type(ProviderConfigProperty.MULTIVALUED_STRING_TYPE)
                 .add()
                 .build();

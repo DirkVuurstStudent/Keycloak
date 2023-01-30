@@ -1,4 +1,4 @@
-package keycloak;
+package avit.keycloak;
 
 import org.keycloak.Config;
 import org.keycloak.events.EventListenerProvider;
