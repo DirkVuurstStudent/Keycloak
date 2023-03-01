@@ -1,12 +1,12 @@
 package avit.keycloak.authorizations;
 
-import avit.keycloak.WebhookProtocols;
+import avit.keycloak.domain.WebhookProtocol;
 
 abstract public class AbstractAuthorization {
     private String name;
-    private WebhookProtocols protocol;
+    private WebhookProtocol protocol;
 
-    public AbstractAuthorization(String name, WebhookProtocols protocol) {
+    public AbstractAuthorization(String name, WebhookProtocol protocol) {
         this.name = name;
         this.protocol = protocol;
     }
@@ -15,7 +15,7 @@ abstract public class AbstractAuthorization {
         return this.name;
     }
 
-    public WebhookProtocols getProtocol() {
+    public WebhookProtocol getProtocol() {
         return this.protocol;
     }
 

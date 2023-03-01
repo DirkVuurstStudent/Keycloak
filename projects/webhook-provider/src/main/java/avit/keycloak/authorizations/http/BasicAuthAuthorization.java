@@ -1,6 +1,6 @@
 package avit.keycloak.authorizations.http;
 
-import avit.keycloak.WebhookProtocols;
+import avit.keycloak.domain.WebhookProtocol;
 import avit.keycloak.authorizations.AbstractAuthorization;
 import okhttp3.Credentials;
 import okhttp3.Request;
@@ -15,7 +15,7 @@ public class BasicAuthAuthorization extends AbstractAuthorization {
     private String password;
 
     public BasicAuthAuthorization(String url, String username, String password) {
-        super("Http Basic Auth", WebhookProtocols.HTTP);
+        super("Http Basic Auth", WebhookProtocol.HTTP);
 
         this.url = url;
         this.username = username;
