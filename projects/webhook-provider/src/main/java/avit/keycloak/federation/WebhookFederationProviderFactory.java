@@ -22,7 +22,7 @@ public class WebhookFederationProviderFactory implements UserStorageProviderFact
 
     @Override
     public String getId() {
-        return PROVIDER_NAME;
+        return "webhook";
     }
 
     @Override
