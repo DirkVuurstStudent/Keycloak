@@ -26,7 +26,7 @@ a {
 }
 
 #kc-visual {
-    background: navajowhite;
+    background: linear-gradient(-48deg, #5ea4d5, #0070c0, #1b2032, #0070c0,  #0070c0);
     background-size: 400% 400%;
     animation: gradient 25s ease infinite;
     width: 50%;

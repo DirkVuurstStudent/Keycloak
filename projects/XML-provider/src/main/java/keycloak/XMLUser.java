@@ -1,10 +1,23 @@
 package keycloak;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlAttribute;
+
 public class XMLUser {
+    @XmlAttribute(name = "externalId")
     private String externalId;
+
+    @XmlElement(name = "username")
     private String username;
+
+    @XmlElement(name = "firstName")
     private String firstName;
+
+    @XmlElement(name = "lastName")
     private String lastName;
+
+    @XmlElement(name = "email")
     private String email;
 
     public void setExternalId(String externalId) {
