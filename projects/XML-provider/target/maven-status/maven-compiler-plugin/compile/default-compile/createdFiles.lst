@@ -1,4 +1,5 @@
 keycloak/XMLUser.class
-keycloak/ConfigConstants.class
 keycloak/XMLProviderFactory.class
+keycloak/ConfigConstants.class
 keycloak/XMLProvider.class
+keycloak/XMLUsers.class

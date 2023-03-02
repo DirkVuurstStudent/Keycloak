@@ -3,11 +3,11 @@ package keycloak;
 import org.keycloak.component.ComponentModel;
 import org.keycloak.component.ComponentValidationException;
 import org.keycloak.models.KeycloakSession;
+import org.keycloak.models.UserProvider;
 import org.keycloak.models.RealmModel;
 import org.keycloak.provider.ProviderConfigProperty;
 import org.keycloak.provider.ProviderConfigurationBuilder;
 import org.keycloak.storage.UserStorageProviderFactory;
-// import org.keycloak.utils.StringUtil;
 
 import java.util.List;
 
@@ -17,7 +17,9 @@ public class XMLProviderFactory implements UserStorageProviderFactory<XMLProvide
 
     @Override
     public XMLProvider create(KeycloakSession session, ComponentModel model) {
-        return new XMLProvider(session, model);
+        RealmModel realm = session.getContext().getRealm();
+        UserProvider userProvider = session.getProvider(UserProvider.class);;
+        return new XMLProvider(session, model, realm, userProvider);
     }
 
     @Override
@@ -35,12 +37,5 @@ public class XMLProviderFactory implements UserStorageProviderFactory<XMLProvide
         return ProviderConfigurationBuilder.create()
             .property(ConfigConstants.XML_PATH, "Path", "Path to XML file", ProviderConfigProperty.STRING_TYPE, "", null)
             .build();
-    }
-
-    @Override
-    public void validateConfiguration(KeycloakSession session, RealmModel realm, ComponentModel config) throws ComponentValidationException {
-//         if (StringUtil.isBlank(config.get(ConfigConstants.XML_PATH))) {
-//             throw new ComponentValidationException("Configuration not properly set, please verify.");
-//         }
     }
 }
