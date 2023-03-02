@@ -1,5 +1,11 @@
-avit/keycloak/WebhookConfig.class
 avit/keycloak/HttpWebhookProviderFactory.class
+avit/keycloak/Webhook.class
+avit/keycloak/domain/WebhookAuthorizationEntityProviderFactory.class
+avit/keycloak/domain/WebhookEntityProviderFactory.class
+avit/keycloak/HttpWebhookProvider.class
+avit/keycloak/domain/WebhookProtocol.class
+avit/keycloak/WebhookConfig.class
+avit/keycloak/authorizations/AbstractAuthorization.class
 avit/keycloak/federation/WebhookFederationProvider.class
 avit/keycloak/federation/WebhookFederationProviderFactory.class
-avit/keycloak/HttpWebhookProvider.class
+avit/keycloak/domain/WebhookAuthorizationEntityProvider.class
