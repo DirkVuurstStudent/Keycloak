@@ -1,5 +1,7 @@
 package avit.keycloak;
 
+import avit.keycloak.domain.Webhook;
+import avit.keycloak.domain.WebhookAuthorizationEntityProvider;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -10,6 +12,7 @@ import org.keycloak.events.EventListenerProvider;
 import org.keycloak.events.admin.AdminEvent;
 
 import java.io.IOException;
+import java.util.List;
 
 public class HttpWebhookProvider implements EventListenerProvider {
 
@@ -47,6 +50,8 @@ public class HttpWebhookProvider implements EventListenerProvider {
 
     @Override
     public void onEvent(Event event) {
+        // Find webhooks by event and run send all webhooks based on protocol and
+
         log.debug("Event Occurred:" + toString(event));
     }
 

@@ -8,7 +8,7 @@
     <description>Webhook Provider Proof of Concept</description>
     <name>Webhook Provider</name>
     <artifactId>webhook-provider</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
 
     <properties>

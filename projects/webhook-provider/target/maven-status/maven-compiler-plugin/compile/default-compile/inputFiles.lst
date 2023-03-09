@@ -1,5 +1,16 @@
+/home/app/src/main/java/avit/keycloak/domain/WebhookAuthorizationEntityProvider.java
 /home/app/src/main/java/avit/keycloak/HttpWebhookProvider.java
 /home/app/src/main/java/avit/keycloak/federation/WebhookFederationProvider.java
 /home/app/src/main/java/avit/keycloak/HttpWebhookProviderFactory.java
 /home/app/src/main/java/avit/keycloak/WebhookConfig.java
+/home/app/src/main/java/avit/keycloak/WebhookFactory.java
+/home/app/src/main/java/avit/keycloak/domain/WebhookAuthorizationEntityProviderFactory.java
+/home/app/src/main/java/avit/keycloak/domain/WebhookEntityProviderFactory.java
+/home/app/src/main/java/avit/keycloak/domain/WebhookAuthorization.java
+/home/app/src/main/java/avit/keycloak/domain/Webhook.java
+/home/app/src/main/java/avit/keycloak/authorizations/http/BasicAuthAuthorization.java
+/home/app/src/main/java/avit/keycloak/authorizations/AbstractAuthorization.java
+/home/app/src/main/java/avit/keycloak/domain/WebhookAuthorizationType.java
+/home/app/src/main/java/avit/keycloak/domain/WebhookEntityProvider.java
 /home/app/src/main/java/avit/keycloak/federation/WebhookFederationProviderFactory.java
+/home/app/src/main/java/avit/keycloak/domain/WebhookProtocol.java
