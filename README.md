@@ -21,5 +21,6 @@ Build a .jar from a project
   - `docker-compose run buildWebhookProvider`
   - `docker-compose run buildXMLProvider`
   - `docker-compose run buildTwofactorSMSAuthenticator`
+  - `docker-compose run buildProvisioningEventListener`
 - Copy the `...jar` file to the `providers` directory
 - Restart keycloak with `docker-compose restart keycloak`

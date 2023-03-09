@@ -15,3 +15,8 @@ services:
         command: 'mvn -f /home/app/pom.xml clean install'
         volumes:
             - "./twofactor-sms-authenticator:/home/app"
+    buildProvisioningEventListener:
+        image: maven:3.6.0-jdk-11-slim
+        command: 'mvn -f /home/app/pom.xml clean install'
+        volumes:
+            - "./provisioning-event-listener:/home/app"
