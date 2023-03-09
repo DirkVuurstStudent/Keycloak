@@ -1,0 +1,5 @@
+/home/app/src/main/java/avit/keycloak/SmsAuthenticatorFactory.java
+/home/app/src/main/java/avit/keycloak/SmsAuthenticator.java
+/home/app/src/main/java/avit/keycloak/gateway/SmsServiceFactory.java
+/home/app/src/main/java/avit/keycloak/gateway/SmsService.java
+/home/app/src/main/java/avit/keycloak/gateway/AwsSmsService.java

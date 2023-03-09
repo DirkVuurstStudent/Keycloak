@@ -1,0 +1,5 @@
+avit/keycloak/SmsAuthenticatorFactory.class
+avit/keycloak/gateway/AwsSmsService.class
+avit/keycloak/SmsAuthenticator.class
+avit/keycloak/gateway/SmsServiceFactory.class
+avit/keycloak/gateway/SmsService.class
