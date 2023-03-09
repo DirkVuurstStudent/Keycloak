@@ -11,8 +11,11 @@ import org.keycloak.storage.UserStorageProvider;
 public class WebhookFederationProvider implements UserStorageProvider {
     private static final Logger logger = Logger.getLogger(WebhookFederationProvider.class);
 
-    public WebhookFederationProvider(KeycloakSession session, ComponentModel model,
-                                     WebhookFederationProviderFactory factory) {
+    public WebhookFederationProvider(
+            KeycloakSession session,
+            ComponentModel model,
+            WebhookFederationProviderFactory factory
+    ) {
 
     }
 

@@ -1,7 +1,8 @@
 package avit.keycloak.authorizations;
 
 import avit.keycloak.domain.WebhookProtocol;
-import org.json.simple.JSONObject;
+
+import javax.json.JsonObject;
 
 abstract public class AbstractAuthorization {
     private String name;
@@ -20,5 +21,5 @@ abstract public class AbstractAuthorization {
         return this.protocol;
     }
 
-    abstract public void sendData(JSONObject data);
+    abstract public void sendData(JsonObject data);
 }

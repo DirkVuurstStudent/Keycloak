@@ -1,10 +1,10 @@
 package avit.keycloak.domain;
 
+import javax.json.Json;
 import javax.json.JsonObject;
 import javax.persistence.*;
+import java.io.StringReader;
 import java.util.List;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
 
 @Entity
 @Table(name = "AVIT_WEBHOOKS")
@@ -34,11 +34,11 @@ public class Webhook {
         return this.authorization;
     }
 
-    public void setConfig(JSONObject config) {
+    public void setConfig(JsonObject config) {
         this.config = config.toString();
     }
 
     public JsonObject getConfig() {
-        return (JsonObject) JSONValue.parse(this.config);
+        return Json.createParser(new StringReader(this.config)).getObject();
     }
 }

@@ -4,7 +4,8 @@ import avit.keycloak.authorizations.AbstractAuthorization;
 import avit.keycloak.authorizations.http.BasicAuthAuthorization;
 import avit.keycloak.domain.Webhook;
 import avit.keycloak.domain.WebhookAuthorization;
-import org.json.simple.JSONObject;
+
+import javax.json.JsonObject;
 
 public class WebhookFactory {
     private AbstractAuthorization authorization;
@@ -24,7 +25,7 @@ public class WebhookFactory {
         }
     }
 
-    public void sendData(JSONObject data) {
+    public void sendData(JsonObject data) {
         this.authorization.sendData(data);
     }
 }

@@ -2,7 +2,8 @@ package avit.keycloak.authorizations.http;
 
 import avit.keycloak.domain.WebhookProtocol;
 import avit.keycloak.authorizations.AbstractAuthorization;
-import org.json.simple.JSONObject;
+
+import javax.json.JsonObject;
 
 public class BasicAuthAuthorization extends AbstractAuthorization {
     private String url;
@@ -18,7 +19,7 @@ public class BasicAuthAuthorization extends AbstractAuthorization {
     }
 
     @Override
-    public void sendData(JSONObject data) {
+    public void sendData(JsonObject data) {
 
     }
 }
