@@ -56,20 +56,33 @@ public class XMLProvider implements UserStorageProvider,
     }
 
     @Override
+    public UserModel getUserById(String id, RealmModel realm) {
+        StorageId storageId = new StorageId(id);
+        String username = storageId.getExternalId();
+        return getUserByUsername(username, realm);
+    }
+
+    @Override
     public UserModel getUserByUsername(String username, RealmModel realm) {
-        // TODO: Implement
-        return null;
+        UserModel adapter = loadedUsers.get(username);
+        if (adapter == null) {
+            User user = userProvider.getUser(username);
+            if (user != null) {
+                adapter = createAdapter(realm, username);
+                loadedUsers.put(username, adapter);
+            }
+        }
+        return adapter;
     }
 
     @Override
     public UserModel getUserByEmail(String email, RealmModel realm) {
-        // TODO: Implement
         return null;
     }
 
     @Override
-    public UserModel getUserById(String id, RealmModel realm) {
-        // TODO: Implement
-        return null;
+    public boolean supportsCredentialType(String credentialType) {
+        return credentialType.equals(PasswordCredentialModel.TYPE);
     }
 }
+
